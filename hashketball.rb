@@ -240,15 +240,23 @@ def most_points_scored
 end
 
 def winning_team
-  score1 = 0
-  score2 = 0
   score1_points = []
+  score2_points = []
   game_hash[:home][:players].each do |player|
     player.each do |name, stats|
       score1_points << player[name][:points]
     end
   end
-  puts score1_points.sum
+  home_score = score1_points.sum
+
+  game_hash[:away][:players].each do |player|
+    player.each do |name, stats|
+      score2_points << player[name][:points]
+    end
+  end
+  away_score = score2_points.sum
+
+  home_score > away_score ? game_hash[:home][:team_name] : game_hash[:away][:team_name]
   # game_hash[:away][:players]
 
 end
