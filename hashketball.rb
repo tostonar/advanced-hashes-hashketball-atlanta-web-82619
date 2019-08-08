@@ -211,7 +211,7 @@ def big_shoe_rebounds
   game_hash.each do |location, team_data|
     team_data[:players].each do |member|
       member.each do |name, stats|
-        
+        #if this member's shoe size is greater than the current value of shoe_size, then reassign the current shoe size to shoe_size
         if member[name][:shoe] > shoe_size
           shoe_size = member[name][:shoe]
           largest = name
