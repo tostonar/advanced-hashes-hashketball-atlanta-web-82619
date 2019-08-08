@@ -244,10 +244,11 @@ def winning_team
   score2 = 0
   score1_points = []
   game_hash[:home][:players].each do |player|
-    binding.pry
-    score1_points << player[:points]
+    player.each do |name, stats|
+      score1_points << player[name][:points]
+    end
   end
-  score1_points
+  puts score1_points
   # game_hash[:away][:players]
 
 end
