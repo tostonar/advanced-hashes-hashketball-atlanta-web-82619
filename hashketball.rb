@@ -223,4 +223,14 @@ def big_shoe_rebounds
   return largest_rebounds = player_stats(largest)[:rebounds]
 end
 
-puts big_shoe_rebounds
+def most_points_scored
+
+end
+
+def winning_team
+
+end
+
+def player_with_longest_name
+
+end
