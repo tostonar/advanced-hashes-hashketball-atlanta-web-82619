@@ -256,9 +256,7 @@ def winning_team
   end
   away_score = score2_points.sum
 
-  home_score > away_score ? game_hash[:home][:team_name] : game_hash[:away][:team_name]
-  # game_hash[:away][:players]
-
+  home_score > away_score ? game_hash[:home][:team_name] : game_hash[:away][:team_name]  
 end
 
 def player_with_longest_name
@@ -292,5 +290,3 @@ def long_name_steals_a_ton?
   end
   return player_with_most_steals == player_with_longest_name
 end
-
-p winning_team
