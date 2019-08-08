@@ -242,7 +242,11 @@ end
 def winning_team
   score1 = 0
   score2 = 0
-  puts game_hash[:home][:players][:points]
+  score1_points = []
+  game_hash[:home][:players].each do |player|
+    score1_points << player[:points] 
+  end
+  score1_points
   # game_hash[:away][:players]
 
 end
@@ -279,4 +283,4 @@ def long_name_steals_a_ton?
   return player_with_most_steals == player_with_longest_name
 end
 
-winning_team
+
