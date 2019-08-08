@@ -248,7 +248,7 @@ def winning_team
       score1_points << player[name][:points]
     end
   end
-  puts score1_points
+  puts score1_points.sum
   # game_hash[:away][:players]
 
 end
