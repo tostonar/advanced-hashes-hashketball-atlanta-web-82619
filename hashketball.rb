@@ -240,6 +240,10 @@ def most_points_scored
 end
 
 def winning_team
+  score1 = 0
+  score2 = 0
+  puts game_hash[:home][:players][:points]
+  # game_hash[:away][:players]
 
 end
 
