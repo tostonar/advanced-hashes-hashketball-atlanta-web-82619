@@ -244,6 +244,7 @@ def winning_team
   score2 = 0
   score1_points = []
   game_hash[:home][:players].each do |player|
+    binding.pry
     score1_points << player[:points]
   end
   score1_points
@@ -282,5 +283,3 @@ def long_name_steals_a_ton?
   end
   return player_with_most_steals == player_with_longest_name
 end
-
-puts winning_team
